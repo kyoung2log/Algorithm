@@ -1,22 +1,22 @@
-### 문제 
-![](https://images.velog.io/images/chestnut1044/post/0cb366df-a027-44aa-a990-09d9cef0c2f4/image.png)
+## 🔴 문제
+> [구구단](https://www.acmicpc.net/problem/2739)
 
----
+<br/>
 
-### sol
-```
+## 🟡 Sol
+```python
 N = int(input())
 
 for i in range(1, 10):
     print(N, "*", i, "=", N*i)
 ```
+<br/>
 
----
+## 🟢 풀이
+range(a,b)함수 -> a 부터 b-1까지 반복되는 이터러블을 반환
 
-### 풀이
-range (a,b) = a 부터 b-1까지 !!
 
----
+<br/>
 
-### 참고 
-https://wikidocs.net/22
+## 🔵 Ref
+> https://wikidocs.net/22
