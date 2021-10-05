@@ -1,11 +1,10 @@
-### 문제
-![](https://images.velog.io/images/chestnut1044/post/45d19c14-06f1-4bd6-aa64-679ade279924/image.png)
+## 🔴 문제
+> [사분면 고르기](https://www.acmicpc.net/problem/14681)
 
----
+<br/>
 
-### sol
-
-```
+## 🟡 Sol
+```python
 x = int(input())
 y = int(input())
 
@@ -18,12 +17,13 @@ elif(x<0 and y<0):
 else:
     print("4")
 ```
+<br/>
 
----
+## 🟢 풀이
+if - elif 문 사용 
 
-### 풀이
 
-if - elif 문 사용
 
----
-### 참고
+<br/>
+
+## 🔵 Ref
