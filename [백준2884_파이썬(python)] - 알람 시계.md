@@ -1,10 +1,10 @@
-### 문제
-![](https://images.velog.io/images/chestnut1044/post/ef2f6679-4c97-4b24-b2da-2da56013966b/image.png)
+## 🔴 문제
+> [알람 시계](https://www.acmicpc.net/problem/2884)
 
----
+<br/>
 
-### sol
-```
+## 🟡 Sol
+```python
 H, M = input().split()
 H = int(H)
 M = int(M)
@@ -16,13 +16,13 @@ elif(M<45 and H == 0):
 else:
     print(H-1, M+60-45)
 ```
+<br/>
 
----
-### 풀이
+## 🟢 풀이
+자정일때를 고려해주어야 한다.
 
-자정일때를 따로 생각해주어야한다.
 
----
 
-### 참고
+<br/>
 
+## 🔵 Ref
