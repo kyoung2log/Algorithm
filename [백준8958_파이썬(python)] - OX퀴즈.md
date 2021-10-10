@@ -1,9 +1,10 @@
-### 문제
-![](https://images.velog.io/images/chestnut1044/post/771e755c-b1ec-4b65-afe4-0b89b0d58ec1/image.png)
+## 🔴 문제
+> [OX퀴즈](https://www.acmicpc.net/problem/8958)
 
----
-### sol
-```
+<br/>
+
+## 🟡 Sol
+```python
 import sys
 T = int(input())
 arr = []
@@ -21,12 +22,13 @@ for i in range(T):
     stack = 1
     sum = 0
 ```
+<br/>
 
----
-### 풀이
+## 🟢 풀이
 테스트 케이스 만큼 값을 입력받아 배열에 추가
 중첩 for문을 사용해서 X를 만나면 stack을 1로 초기화해준다. 
 지저분한거같기도
 
----
-### 참고
+<br/>
+
+## 🔵 Ref
