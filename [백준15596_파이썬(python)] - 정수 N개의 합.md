@@ -1,27 +1,21 @@
-### 문제
-![](https://images.velog.io/images/chestnut1044/post/edc9e92d-76d2-44c2-9167-af9cae4fd12b/image.png)
+## 🔴 문제
+> [정수 N개의 합](https://www.acmicpc.net/problem/15596)
 
+<br/>
 
----
-
-### sol
-```
+## 🟡 Sol
+```python
 def solve(a):
     sum = 0
     for i in range(len(a)):
         sum = sum + int(a[i])
     return sum
-
 ```
+<br/>
 
-
----
-
-### 풀이
-
+## 🟢 풀이
 뚝-딱 하고 하면된다.
 
+<br/>
 
----
-
-### 참고
+## 🔵 Ref
