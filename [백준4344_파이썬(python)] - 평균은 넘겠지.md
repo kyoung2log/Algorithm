@@ -1,5 +1,3 @@
-![](https://images.velog.io/images/chestnut1044/post/5dc7dc30-efc5-45d1-bbdb-776e1f7f34d2/image.png)
-
 ## 🔴 문제
 > [평균은 넘겠지](https://www.acmicpc.net/problem/4344)
 
