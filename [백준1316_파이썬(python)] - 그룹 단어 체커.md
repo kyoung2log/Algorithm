@@ -1,10 +1,10 @@
-### 문제
-![](https://images.velog.io/images/chestnut1044/post/8690c85c-5328-4b1e-96f1-1ca5279b2b27/image.png)
+## 🔴 문제
+> [그룹 단어 체커](https://www.acmicpc.net/problem/1316)
 
+<br/>
 
----
-### sol
-```
+## 🟡 Sol
+```python
 import sys
 n = int(input())
 result = 0
@@ -22,14 +22,14 @@ for i in range(n):
         result = result + 1
 print(result)
 ```
+<br/>
 
-
----
-### 풀이
+## 🟢 풀이
 check 의 부울값을 True로 설정한 뒤
 중첩반복문을 사용해 나왔던문자가 또 나온다면 false 반환
-True일때만 값을 세서 출력
+True일때만 값을 세서 출력한다.
 
 
----
-### 참고
+<br/>
+
+## 🔵 Ref
