@@ -1,12 +1,10 @@
-### 문제
+## 🔴 문제
+> [분수찾기](https://www.acmicpc.net/problem/1193)
 
-![](https://images.velog.io/images/chestnut1044/post/3ca6a778-1fea-421d-8c63-bc39177f0dd5/image.png)
+<br/>
 
----
-
-### sol
-
-```
+## 🟡 Sol
+```python
 X = int(input())
 
 line = 1
@@ -22,13 +20,10 @@ else:
     b = X
 
 print(a, '/', b, sep='')
-
 ```
+<br/>
 
----
-
-### 풀이
-
+## 🟢 풀이
 내코드가 아님 몰라서 참고함 똑똑하다
 
 ```
@@ -39,8 +34,8 @@ while X > line:
 
 기억하기 !
 
----
 
-### 참고
+<br/>
 
-https://deokkk9.tistory.com/11
+## 🔵 Ref
+> https://deokkk9.tistory.com/11
