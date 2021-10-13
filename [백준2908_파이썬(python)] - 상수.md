@@ -28,5 +28,5 @@ else:
 <br/>
 
 ## 🔵 Ref
-https://ooyoung.tistory.com/72
+> https://ooyoung.tistory.com/72
 https://itholic.github.io/python-reverse-string/
