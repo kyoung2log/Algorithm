@@ -1,12 +1,10 @@
-### 문제
+## 🔴 문제
+> [설탕 배달](https://www.acmicpc.net/problem/2839)
 
-![](https://images.velog.io/images/chestnut1044/post/b9829f06-ea70-450c-a67b-cc4de74c0c94/image.png)
+<br/>
 
----
-
-### sol
-
-```
+## 🟡 Sol
+```python
 N = int(input())
 cnt = N//5
 while(True):
@@ -26,15 +24,15 @@ while(True):
             print("-1")
             break
 ```
+<br/>
 
----
-
-### 풀이
-
+## 🟢 풀이
 먼저 입력받은 N을 5로 나눈수를 cnt로 지정
 (N-5\*cnt)가 3으로 나눠지면 result 출력, break
 3으로 안나눠진다면 cnt 즉 5를 하나 줄여서 3으로 나눠지는지 확인
 
----
 
-### 참고
+<br/>
+
+## 🔵 Ref
+
