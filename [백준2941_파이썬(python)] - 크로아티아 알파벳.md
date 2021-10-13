@@ -1,11 +1,10 @@
-### 문제
-![](https://images.velog.io/images/chestnut1044/post/e06e3fdb-3810-4bc7-aed6-59162a53eb7e/image.png)
+## 🔴 문제
+> [크로아티아 알파벳](https://www.acmicpc.net/problem/2941)
 
+<br/>
 
----
-
-### sol
-```
+## 🟡 Sol
+```python
 s = input()
 for i in  range(len(s)):
     if('c=' in s):
@@ -26,12 +25,11 @@ for i in  range(len(s)):
         s = s.replace('z=','.')
 print(len(s))
 ```
+<br/>
 
----
-### 풀이
-크로아티아 알파벳이 문자열 안에 있다면 다른문자로 바꿔준뒤, 마지막에 문자열의 길이를 출력하면된다.
+## 🟢 풀이
+크로아티아 알파벳이 문자열 안에 있다면 다른문자로 바꿔준 뒤, 마지막에 문자열의 길이를 출력하면된다.
 
+<br/>
 
----
-
-### 참고
+## 🔵 Ref
