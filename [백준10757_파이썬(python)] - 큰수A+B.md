@@ -1,26 +1,24 @@
-### 문제
+## 🔴 문제
+> [큰 수 A+B](https://www.acmicpc.net/problem/10757)
 
-![](https://images.velog.io/images/chestnut1044/post/55806c45-df94-4584-bb1f-5d297de53ccf/image.png)
+<br/>
 
----
-
-### sol
-
-```
+## 🟡 Sol
+```python
 A, B = input().split()
 A = int(A)
 B = int(B)
 
 print(A+B)
-
 ```
+<br/>
 
----
-
-### 풀이
+## 🟢 풀이
 
 파이썬은 문제없지 !
 
----
 
-### 참고
+<br/>
+
+## 🔵 Ref
+
