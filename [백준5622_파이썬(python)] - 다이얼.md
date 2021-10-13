@@ -1,11 +1,10 @@
-### 문제
-![](https://images.velog.io/images/chestnut1044/post/03ad592a-c910-4208-89cb-02a556fb3268/image.png)
+## 🔴 문제
+> [다이얼](https://www.acmicpc.net/problem/5622)
 
+<br/>
 
----
-
-### sol
-```
+## 🟡 Sol
+```python
 s = input()
 sum = 0
 
@@ -24,10 +23,9 @@ for i in range(len(s)):
         sum = sum + int(num)
 print(sum)
 ```
+<br/>
 
-
----
-### 풀이
+## 🟢 풀이
 개쩌는 풀이를 발견함 개쩐다 이런생각어케하누
 ```
 dial = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
@@ -41,7 +39,7 @@ print(ret)
 
 ```
 
----
+<br/>
 
-### 참고
-https://j-remind.tistory.com/76
+## 🔵 Ref
+> https://j-remind.tistory.com/76
