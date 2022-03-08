@@ -1,5 +1,5 @@
 ## 🔴 문제
-![](https://images.velog.io/images/chestnut1044/post/afe15d16-4e64-480c-8bb0-3ed16527b138/image.png)
+> https://www.acmicpc.net/problem/2557
 
 <br/>
 
