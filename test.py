@@ -1,29 +1,14 @@
-# T = int(int(input())**(1/3))
-T = 3
-def printStar(T):
-  if(T == 1):
-    print("*"*3)
-    print("* *")
-    print("***")
-    return 0
+from email.quoprimime import body_check
 
-  T = T-1
-  printStar(T)
-  printStar(T)
 
-printStar(T)
-# 
-# ***
-# * *
-# ***
+N = int(input())
+body = []
+rank = [0 for _ in range(N)]
+print(rank)
 
-# 9 
-# *********
-# * ** ** *
-# *********
-# ***   ***
-# * *   * *
-# ***   ***
-# *********
-# * ** ** *
-# *********
+for i in range(N):
+  body.append(list(map(int, input().split())))
+  max(body)
+
+
+print(max(body), body)
