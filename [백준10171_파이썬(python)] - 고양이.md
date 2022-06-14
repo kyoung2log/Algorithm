@@ -1,5 +1,5 @@
 ## 🔴 문제
-> [고양이](https://images.velog.io/images/chestnut1044/post/e6dad142-2602-448b-a2bf-64a3bbe1af0d/image.png)
+> [고양이](https://www.acmicpc.net/problem/10171)
 
 
 <br/>
