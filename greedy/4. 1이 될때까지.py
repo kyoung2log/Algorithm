@@ -5,7 +5,7 @@ if(n%k == 0):
   print(round(n**(1/k)))
 else:
   cnt = n%k
-  print(cnt + round(n**(1/k)))
+#  print(cnt + round(n**(1/k)))
 
 # while n > 1:
 #   if(n%k == 0):
