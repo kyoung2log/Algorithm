@@ -10,5 +10,4 @@ def solution(letter):
     letters_list = list(letter.split(' '))
     for i in letters_list:
         answer += morse[i]
-
     return answer
