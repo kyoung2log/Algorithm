@@ -65,50 +65,51 @@ Lv 0
 [59. 삼각형의 완성조건 (2)](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%82%BC%EA%B0%81%ED%98%95%EC%9D%98%20%EC%99%84%EC%84%B1%EC%A1%B0%EA%B1%B4%20(2).py)<br/>
 [60. 외계어 사전](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%99%B8%EA%B3%84%EC%96%B4%20%EC%82%AC%EC%A0%84.py)<br/>
 
-[61. 저주의 숫자 3]()<br/>
-[62. 평행]()<br/>
+[61. 저주의 숫자 3](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%A0%80%EC%A3%BC%EC%9D%98%20%EC%88%AB%EC%9E%903.py)<br/>
+[62. 평행](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%ED%8F%89%ED%96%89.py)<br/>
 [63. 겹치는 선분의 길이]()<br/>
-[64. 유한소수 판별하기]()<br/>
-[65. 특이한 정렬]()<br/>
-[66. 등수 매기기]()<br/>
-[67. 로그인 성공?]()<br/>
-[68. 치킨 쿠폰]()<br/>
-[69. 이진수 더하기]()<br/>
-[70. A로 B 만들기]()<br/>
-[71. k의 개수]()<br/>
-[72. 중복된 문자 제거]()<br/>
-[73. 삼각형의 완성조건(1)]()<br/>
-[74. 가까운 수]()<br/>
-[75. 369게임]()<br/>
-[76. 암호 해독]()<br/>
-[77. 대문자와 소문자]()<br/>
-[78. 영어가 싫어요]()<br/>
-[79. 인덱스 바꾸기]()<br/>
-[80. 한 번만 등장한 문자]()<br/>
+[64. 유한소수 판별하기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%9C%A0%ED%95%9C%EC%86%8C%EC%88%98%20%ED%8C%90%EB%B3%84%ED%95%98%EA%B8%B0.py)<br/>
+[65. 특이한 정렬](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%ED%8A%B9%EC%9D%B4%ED%95%9C%20%EC%A0%95%EB%A0%AC.py)<br/>
+[66. 등수 매기기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EB%93%B1%EC%88%98%20%EB%A7%A4%EA%B8%B0%EA%B8%B0.py)<br/>
+[67. 로그인 성공?](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%84%B1%EA%B3%B5.py)<br/>
+[68. 치킨 쿠폰](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%B9%98%ED%82%A8%20%EC%BF%A0%ED%8F%B0.py)<br/>
+[69. 이진수 더하기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%9D%B4%EC%A7%84%EC%88%98%20%EB%8D%94%ED%95%98%EA%B8%B0.py)<br/>
+[70. A로 B 만들기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/A%EB%A1%9C%20B%EB%A7%8C%EB%93%A4%EA%B8%B0.py)<br/>
+[71. k의 개수](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/k%EC%9D%98%20%EA%B0%9C%EC%88%98.py)<br/>
+[72. 중복된 문자 제거](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%A4%91%EB%B3%B5%EB%90%9C%20%EB%AC%B8%EC%9E%90%20%EC%A0%9C%EA%B1%B0.py)<br/>
+[73. 삼각형의 완성조건(1)](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%82%BC%EA%B0%81%ED%98%95%EC%9D%98%20%EC%99%84%EC%84%B1%EC%A1%B0%EA%B1%B4%20(1).py)<br/>
+[74. 가까운 수](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EA%B0%80%EA%B9%8C%EC%9A%B4%20%EC%88%98.py)<br/>
+[75. 369게임](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/369%EA%B2%8C%EC%9E%84.py)<br/>
+[76. 암호 해독](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%95%94%ED%98%B8%20%ED%95%B4%EB%8F%85.py)<br/>
+[77. 대문자와 소문자](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EB%8C%80%EB%AC%B8%EC%9E%90%EC%99%80%20%EC%86%8C%EB%AC%B8%EC%9E%90.py)<br/>
+[78. 영어가 싫어요](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%98%81%EC%96%B4%EA%B0%80%20%EC%8B%AB%EC%96%B4%EC%9A%94.py)<br/>
+[79. 인덱스 바꾸기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%9D%B8%EB%8D%B1%EC%8A%A4%20%EB%B0%94%EA%BE%B8%EA%B8%B0.py)<br/>
+[80. 한 번만 등장한 문자](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%ED%95%9C%20%EB%B2%88%EB%A7%8C%20%EB%93%B1%EC%9E%A5%ED%95%9C%20%EB%AC%B8%EC%9E%90.py)<br/>
 
 
 
-[61. 약수 구하기]()<br/>
-[62. 편지]()<br/>
-[63. 가장 큰 수 찾기]()<br/>
-[64. 문자열 계산하기]()<br/>
-[65. 배열의 유사도]()<br/>
-[66. 숫자 찾기]()<br/>
-[67. n의 배수 고르기]()<br/>
-[68. 자릿수 더하기]()<br/>
-[69. OX퀴즈]()<br/>
-[70. 문자열 안에 문자열]()<br/>
-[71. 제곱수 판별하기]()<br/>
-[72. 세균 증식]()<br/>
-[73. 문자열 정렬하기 (2)]()<br/>
-[74. 7의 개수]()<br/>
-[75. 잘라서 배열로 저장하기]()<br/>
-[76. 문자열 밀기]()<br/>
-[77. 종이 자르기]()<br/>
-[78. 연속된 수의 합]()<br/>
-[79. 다음에 올 숫자]()<br/>
+[81. 약수 구하기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%95%BD%EC%88%98%20%EA%B5%AC%ED%95%98%EA%B8%B0.py)<br/>
+[82. 편지](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%ED%8E%B8%EC%A7%80.py)<br/>
+[83. 가장 큰 수 찾기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EA%B0%80%EC%9E%A5%20%ED%81%B0%20%EC%88%98%20%EC%B0%BE%EA%B8%B0.py)<br/>
+[84. 문자열 계산하기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EA%B3%84%EC%82%B0%ED%95%98%EA%B8%B0.py)<br/>
+[85. 배열의 유사도](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EB%B0%B0%EC%97%B4%EC%9D%98%20%EC%9C%A0%EC%82%AC%EB%8F%84.py)<br/>
+[86. 숫자 찾기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%88%AB%EC%9E%90%20%EC%B0%BE%EA%B8%B0.py)<br/>
+[87. n의 배수 고르기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/n%EC%9D%98%20%EB%B0%B0%EC%88%98%20%EA%B3%A0%EB%A5%B4%EA%B8%B0.py)<br/>
+[88. 자릿수 더하기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%9E%90%EB%A6%BF%EC%88%98%20%EB%8D%94%ED%95%98%EA%B8%B0.py)<br/>
+[89. OX퀴즈](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/OX%ED%80%B4%EC%A6%88.py)<br/>
 
 
+[90. 문자열안에 문자열](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EB%AC%B8%EC%9E%90%EC%97%B4%EC%95%88%EC%97%90%20%EB%AC%B8%EC%9E%90%EC%97%B4.py)<br/>
+[91. 제곱수 판별하기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%A0%9C%EA%B3%B1%EC%88%98%20%ED%8C%90%EB%B3%84%ED%95%98%EA%B8%B0.py)<br/>
+[92. 세균 증식](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%84%B8%EA%B7%A0%20%EC%A6%9D%EC%8B%9D.py)<br/>
+[93. 문자열 정렬하기 (2)](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0%20(2).py)<br/>
+[94. 7의 개수](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/7%EC%9D%98%20%EA%B0%9C%EC%88%98.py)<br/>
+[95. 잘라서 배열로 저장하기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%9E%98%EB%9D%BC%EC%84%9C%20%EB%B0%B0%EC%97%B4%EB%A1%9C%20%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0.py)<br/>
+[96. 문자열 밀기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%B0%80%EA%B8%B0.py)<br/>
+[97. 종이 자르기](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%A2%85%EC%9D%B4%20%EC%9E%90%EB%A5%B4%EA%B8%B0.py)<br/>
+[98. 연속된 수의 합](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%97%B0%EC%86%8D%EB%90%9C%20%EC%88%98%EC%9D%98%20%ED%95%A9.py)<br/>
+[99. 다음에 올 숫자](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EB%8B%A4%EC%9D%8C%EC%97%90%20%EC%98%AC%20%EC%88%AB%EC%9E%90.py)<br/>
+[100. 옹알이(1)](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%98%B9%EC%95%8C%EC%9D%B4(1).py)<br/>
 
 
 
@@ -123,6 +124,8 @@ Lv 0
 Lv 1
 </h1>
 - 푸는중..
+[100. 옹알이(1)]()<br/>
+
 <br/>
 <br/>
 <br/>
