@@ -2,11 +2,11 @@
 
 
 
-<hr />
+
 <h2 align="center">
 Lv 0
 </h2>
-<hr />
+
 
 [1. 중복된 숫자 개수](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%A4%91%EB%B3%B5%EB%90%9C%20%EC%88%AB%EC%9E%90%20%EA%B0%9C%EC%88%98.py)<br/>
 [2. 머쓱이보다 키 큰 사람](https://github.com/chestnut-CodingTest/programmers_python/commit/dfacf18c532cad46df6d82329bc35a13ccf1a3c4)<br/>
@@ -110,12 +110,12 @@ Lv 0
 [100. 옹알이(1)](https://github.com/chestnut-CodingTest/programmers_python/blob/main/Lv.%200/%EC%98%B9%EC%95%8C%EC%9D%B4(1).py)<br/>
 
 <br/>
-<hr />
+
 
 <h2 align="center">
 Lv 1
 </h2>
-<hr />
+
 
 [1. 폰켓몬]()<br/>
 
@@ -256,11 +256,10 @@ Lv 1
 <br/>
 
 
-<hr />
+
 <h2 align="center">
 Lv 2
 </h2>
-<hr />
 
 
 - 푸는중..
@@ -270,11 +269,10 @@ Lv 2
 
 
 
-<hr />
+
 <h2 align="center">
 Lv 3
 </h2>
-<hr />
 
 - 푸는중..
 <br/>
