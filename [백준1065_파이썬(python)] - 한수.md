@@ -1,10 +1,10 @@
-### 문제
-![](https://images.velog.io/images/chestnut1044/post/226151ef-dd4a-4957-ae0a-abaa0e73dccd/image.png)
+## 🔴 문제
+> [한수](https://www.acmicpc.net/problem/1065)
 
----
+<br/>
 
-### sol
-```
+## 🟡 Sol
+```python
 N = int(input())
 
 def num(x):  
@@ -26,11 +26,11 @@ for i in range(N):
 
 print(sum)
 ```
----
+<br/>
 
-### 풀이
+## 🟢 풀이
 한수이면 True를 리턴하는 함수 num을 만든 뒤 입력받은 N번의 길이만큼 for문을 돌려 해당 수가 한수인지 아닌지 판단한다 한수라면 sum의 값을 1층가시켜 최종 sum 값을 출력
 
----
+<br/>
 
-### 참고
+## 🔵 Ref
