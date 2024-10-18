@@ -1,42 +1,39 @@
 const fs = require('fs');
 const path = process.platform === 'linux' ? '/dev/stdin' : 'Wiki\\input.txt';
-const inputs = fs
-  .readFileSync(path)
-  .toString()
-  .trim()
-  .split('\n')
-  .map((it) => it.split(' ').map(BigInt));
-const n = Number(inputs[0][0]);
-const A = inputs[1];
+const inputs = fs.readFileSync(path, 'utf-8').trim().split('\n');
 
-const map = new Map();
+const n = Number(inputs[0]);
+const A = inputs[1]
+  .split(' ')
+  .map(Number)
+  .sort((a, b) => a - b);
 
-for (const a of A) {
-  if (map.has(a)) map.set(a, map.get(a) + 1);
-  else map.set(a, 1);
+function isGood(target) {
+  let left = 0;
+  let right = A.length - 1;
+
+  while (left < right) {
+    const sum = A[left] + A[right];
+
+    if (left === target) {
+      left += 1;
+      continue;
+    } else if (right === target) {
+      right -= 1;
+      continue;
+    }
+
+    if (sum === A[target]) return true;
+    else if (sum < A[target]) left += 1;
+    else right -= 1;
+  }
+
+  return false;
 }
 
 let ans = 0;
-const bt = (selected, start) => {
-  if (selected.length === 2) {
-    const sum = selected[0] + selected[1];
-
-    if (map.has(sum)) {
-      if (sum === selected[0] && sum === selected[1] && map.get(sum) === 2)
-        return;
-      if (sum === selected[0] && map.get(sum) === 1) return;
-      if (sum === selected[1] && map.get(sum) === 1) return;
-      ans += map.get(sum);
-      map.delete(sum);
-    }
-    return;
-  }
-
-  for (let i = start; i < n; i++) {
-    bt([...selected, A[i]], i + 1);
-  }
-};
-
-bt([], 0);
+for (let i = 0; i < A.length; i++) {
+  if (isGood(i)) ans += 1;
+}
 
 console.log(ans);
