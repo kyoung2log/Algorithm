@@ -5,28 +5,28 @@ const inputs = fs
   .trim()
   .split('\n')
   .map((it) => it.split(' ').map(Number));
+
 const [n, m] = inputs[0];
 const numbers = inputs[1].sort((a, b) => a - b);
 
-const set = new Set();
-const bt = (selected) => {
-  if (selected.length === m) {
-    set.add(selected.join(' '));
+let ans = '';
 
+const bt = (selected, start) => {
+  if (selected.length === m) {
+    ans += selected.join(' ') + '\n';
     return;
   }
 
-  for (const number of numbers) {
-    if (selected.at(-1) <= number) {
-      bt([...selected, number]);
+  let preNumber = -1;
+
+  for (let i = start; i < n; i++) {
+    if (preNumber !== numbers[i]) {
+      bt([...selected, numbers[i]], i);
+
+      preNumber = numbers[i];
     }
   }
 };
 
-for (const number of numbers) {
-  bt([number]);
-}
-
-for (const s of set) {
-  console.log(s);
-}
+bt([], 0);
+console.log(ans);
