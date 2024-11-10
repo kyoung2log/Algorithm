@@ -25,15 +25,8 @@ const bfs = (x, y) => {
       if (map[nx][ny] === 'W') continue;
       if (!visited[nx][ny]) {
         visited[nx][ny] = visited[x][y] + 1;
+        ans = Math.max(visited[nx][ny], ans);
         q.push([nx, ny]);
-      }
-    }
-  }
-
-  for (let i = 0; i < r; i++) {
-    for (let j = 0; j < c; j++) {
-      if (visited[i][j] > ans) {
-        ans = visited[i][j];
       }
     }
   }
