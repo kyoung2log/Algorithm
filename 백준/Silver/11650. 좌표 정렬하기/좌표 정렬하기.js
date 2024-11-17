@@ -6,8 +6,5 @@ const [[n], ...inputs] = fs
   .trim()
   .split('\n')
   .map((it) => it.split(' ').map(Number));
-const ans = inputs.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
-
-for (let i = 0; i < n; i++) {
-  console.log(...ans[i]);
-}
+const ans = inputs.sort((a, b) => a[0] - b[0] || a[1] - b[1]).map(([x, y]) => `${x} ${y}`).join('\n');
+console.log(ans);
