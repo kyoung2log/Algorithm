@@ -14,7 +14,7 @@ distance[1] = 0;
 let hasNegativeCycle = false;
 for (let i = 1; i <= n; i++) {
   for (const [a, b, c] of inputs) {
-    if (distance[a] !== Infinity && distance[b] > distance[a] + c) {
+    if (distance[b] > distance[a] + c) {
       distance[b] = distance[a] + c;
 
       if (i === n) hasNegativeCycle = true;
