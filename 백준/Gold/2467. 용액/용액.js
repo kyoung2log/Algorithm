@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = process.platform === 'linux' ? '/dev/stdin' : 'input.txt';
-const [[n], liquid] = fs
+const [[n], liquids] = fs
   .readFileSync(path)
   .toString()
   .trim()
@@ -9,20 +9,25 @@ const [[n], liquid] = fs
 
 let left = 0;
 let right = n - 1;
-let minAbs = Infinity;
+let minVal = Infinity;
 const ans = [0, 0];
 
 while (left < right) {
-  const abs = Math.abs(liquid[left] + liquid[right]);
+  const sum = Math.abs(liquids[left] + liquids[right]);
 
-  if (abs < minAbs) {
-    minAbs = abs;
-
-    ans[0] = liquid[left];
-    ans[1] = liquid[right];
+  if (sum === 0) {
+    ans[0] = liquids[left];
+    ans[1] = liquids[right];
+    break;
   }
 
-  if (liquid[left] + liquid[right] > 0) right -= 1;
+  if (sum < minVal) {
+    minVal = sum;
+    ans[0] = liquids[left];
+    ans[1] = liquids[right];
+  }
+
+  if (liquids[left] + liquids[right] > 0) right -= 1;
   else left += 1;
 }
 
