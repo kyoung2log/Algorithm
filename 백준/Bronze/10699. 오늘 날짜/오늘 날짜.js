@@ -1,4 +1,7 @@
-let date = new Date();
-date = date.toLocaleDateString().split('/');
+const date = new Date();
 
-console.log(date[2] + '-' + date[0] + '-' + date[1]);
+const yyyy = date.getFullYear();
+const mm = (date.getMonth() + 1).toString().padStart(2, '0');
+const dd = date.getDate().toString().padStart(2, '0');
+
+console.log(`${yyyy}-${mm}-${dd}`);
