@@ -1,29 +1,20 @@
 const fs = require('fs');
-const path = process.platform === 'linux' ? '/dev/stdin' : 'Wiki\\input.txt';
-const [n, m] = fs
-  .readFileSync(path)
-  .toString()
-  .trim()
-  .split(' ')
-  .map((it) => Number(it));
+const path = process.platform === 'linux' ? '/dev/stdin' : 'input.txt';
+const [n, m] = fs.readFileSync(path).toString().trim().split(' ').map(Number);
+let ans = '';
 
-let answer = '';
-
-const bt = (target, cnt) => {
+const bt = (selected, cnt, start) => {
   if (cnt === m) {
-    answer += target + '\n';
+    ans += selected.trim() + '\n';
+
     return;
   }
 
-  for (let i = 1; i <= n; i++) {
-    if (Number(target.slice(-1)) > i) continue;
-
-    bt(target + ' ' + i, cnt + 1);
+  for (let i = start; i <= n; i++) {
+    bt(selected + ' ' + i, cnt + 1, i);
   }
 };
 
-for (let i = 1; i <= n; i++) {
-  bt(i.toString(), 1);
-}
+bt('', 0, 1);
 
-console.log(answer);
+console.log(ans.trim());
