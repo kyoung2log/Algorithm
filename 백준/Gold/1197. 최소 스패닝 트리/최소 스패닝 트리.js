@@ -31,4 +31,5 @@ for (const [s, e, c] of edges) {
   union(s, e);
   ans += c;
 }
+
 console.log(ans);
