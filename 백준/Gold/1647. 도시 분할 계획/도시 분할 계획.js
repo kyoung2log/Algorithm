@@ -6,9 +6,8 @@ const [[n, m], ...inputs] = fs
   .trim()
   .split('\n')
   .map((it) => it.split(' ').map(Number));
-const edges = inputs.sort((a, b) => a[2] - b[2]);
+const graph = inputs.sort((a, b) => a[2] - b[2]);
 const p = Array.from({ length: n + 1 }, (_, idx) => idx);
-let totalCost = edges.reduce((pre, cur) => pre + cur[2], 0);
 
 const find = (a) => {
   if (a !== p[a]) p[a] = find(p[a]);
@@ -23,16 +22,16 @@ const union = (a, b) => {
   p[pb] = pa;
 };
 
-let ans = 0;
-let lastEdge = 0;
-for (const [a, b, c] of edges) {
-  const pa = find(a);
-  const pb = find(b);
+const ans = [0];
+for (const [s, e, c] of graph) {
+  const ps = find(s);
+  const pe = find(e);
 
-  if (pa === pb) continue;
-  union(a, b);
-  ans += c;
-  lastEdge = c;
+  if (ps === pe) continue;
+  union(s, e);
+  ans.push(c);
 }
 
-console.log(ans - lastEdge);
+ans.pop();
+
+console.log(ans.reduce((pre, cur) => pre + cur));
