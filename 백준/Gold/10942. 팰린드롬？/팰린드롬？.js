@@ -14,9 +14,9 @@ for (let i = 0; i < n - 1; i++) {
   if (number[i] === number[i + 1]) dp[i][i + 1] = 1;
 }
 
-for (let i = 3; i <= n; i++) {
+for (let i = 2; i < n; i++) {
   for (let start = 0; start <= n - i; start++) {
-    const end = start + i - 1;
+    const end = start + i;
     if (number[start] === number[end] && dp[start + 1][end - 1]) dp[start][end] = 1;
   }
 }
