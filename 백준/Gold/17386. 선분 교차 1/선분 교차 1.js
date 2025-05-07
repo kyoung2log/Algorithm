@@ -1,36 +1,28 @@
 const fs = require('fs');
 const path = process.platform === 'linux' ? '/dev/stdin' : 'input.txt';
-const [a, b] = fs
+const inputs = fs
   .readFileSync(path)
   .toString()
   .trim()
   .split('\n')
   .map((it) => it.split(' ').map(Number));
 
-const [x1, y1, x2, y2] = a;
-const [x3, y3, x4, y4] = b;
+const [x1, y1, x2, y2] = inputs[0];
+const [x3, y3, x4, y4] = inputs[1];
 
-const CCW = (a, b, c) => {
-  const [x1, y1] = a;
-  const [x2, y2] = b;
-  const [x3, y3] = c;
-
-  const v1 = [x2 - x1, y2 - y1];
-  const v2 = [x3 - x1, y3 - y1];
-
-  const product = v1[0] * v2[1] - v1[1] * v2[0];
-
-  if (product > 0) return 1;
-  if (product < 0) return -1;
-  return 0;
+// 벡터의 외적 의 곱이
+// 1이면 반시계방향
+// -1이면 시계방향
+// 0이면 일치
+const CCW = (x1, y1, x2, y2, x3, y3) => {
+  return (x2 - x1) * (y3 - y1) - (y2 - y1) * (x3 - x1);
 };
 
-let isCross = 0;
+const a = CCW(x1, y1, x2, y2, x3, y3);
+const b = CCW(x1, y1, x2, y2, x4, y4);
 
-if (CCW([x1, y1], [x2, y2], [x3, y3]) + CCW([x1, y1], [x2, y2], [x4, y4]) === 0) {
-  if (CCW([x3, y3], [x4, y4], [x1, y1]) + CCW([x3, y3], [x4, y4], [x2, y2]) === 0) {
-    isCross = 1;
-  }
-}
+const c = CCW(x3, y3, x4, y4, x1, y1);
+const d = CCW(x3, y3, x4, y4, x2, y2);
 
-console.log(isCross);
+if (a * b <= 0 && c * d <= 0) console.log(1);
+else console.log(0);
