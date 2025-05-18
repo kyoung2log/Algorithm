@@ -6,45 +6,44 @@ const [[n], ...inputs] = fs
   .trim()
   .split('\n')
   .map((it) => it.split(' ').map(Number));
-
-const costs = [0];
-const edges = Array.from({ length: n + 1 }, () => []);
-const inDegree = Array(n + 1).fill(0);
-const minCosts = Array(n + 1).fill(0);
+const graph = Array.from({ length: n + 1 }, () => []);
+const indegree = Array(n + 1).fill(0);
+const costs = Array(n + 1).fill(0);
+const dp = Array(n + 1).fill(0);
 
 for (let i = 0; i < n; i++) {
-  const cost = inputs[i].shift();
-  inputs[i].pop();
-
-  costs.push(cost);
-
-  for (const next of inputs[i]) {
-    inDegree[i + 1] += 1;
-    edges[next].push(i + 1);
+  costs[i + 1] = inputs[i].shift();
+  dp[i + 1] = costs[i + 1];
+  for (const num of inputs[i]) {
+    if (num === -1) break;
+    graph[num].push(i + 1);
+    indegree[i + 1] += 1;
   }
 }
 
 const q = [];
 for (let i = 1; i <= n; i++) {
-  if (inDegree[i] === 0) {
-    minCosts[i] = costs[i];
+  if (indegree[i] === 0) {
     q.push(i);
   }
 }
 
+// dp[n] = Math.max(dp[이전단계]) + cost[n]
+// 자기가 꼭 수행해야 하는 녀석들 + 자기 짓는 시간
+// 위의 dp가 수행되려면 이전단계(위상정렬) 순서대로 dp를 채워햐 함
+
 while (q.length) {
   const node = q.shift();
 
-  for (const next of edges[node]) {
-    inDegree[next] -= 1;
-    minCosts[next] = Math.max(costs[next] + minCosts[node], minCosts[next]);
+  for (const next of graph[node]) {
+    dp[next] = Math.max(dp[node] + costs[next], dp[next]);
 
-    if (inDegree[next] === 0) {
-      q.push(next);
-    }
+    indegree[next] -= 1;
+
+    if (indegree[next] === 0) q.push(next);
   }
 }
 
 for (let i = 1; i <= n; i++) {
-  console.log(minCosts[i]);
+  console.log(dp[i]);
 }
