@@ -42,5 +42,5 @@ for (const [a, b, c] of queries) {
     // 리프노트부터 루트노드, 1번노드부터 탑색
     // b-1번이 포함된 서브트리만 수정을 해야하므로 번위를 체크할 인덱스, 연산해야할 차이값
     update(0, n - 1, 1, b - 1, diff);
-  } else console.log(sum(0, n - 1, 1, b - 1, BigInt(c) - 1n).toString());
+  } else console.log(sum(0, n - 1, 1, b - 1, c - 1).toString());
 }
