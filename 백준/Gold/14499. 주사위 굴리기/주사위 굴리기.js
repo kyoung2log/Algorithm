@@ -1,106 +1,40 @@
 const fs = require('fs');
-const path = process.platform === 'linux' ? '/dev/stdin' : 'Wiki\\input.txt';
-const [nmxyk, ...inputs] = fs
+const path = process.platform === 'linux' ? '/dev/stdin' : 'input.txt';
+const inputs = fs
   .readFileSync(path)
   .toString()
   .trim()
-  .split('\n');
-let [n, m, x, y, k] = nmxyk.split(' ').map(Number);
-const comments = inputs[inputs.length - 1];
-const map = inputs.splice(0, n).map((it) => it.split(' ').map(Number));
-let dice = [0, 0, 0, 0, 0, 0];
+  .split('\n')
+  .map((it) => it.split(' ').map(Number));
+let [n, m, x, y, k] = inputs[0];
+const map = inputs.slice(1, n + 1);
+const comments = inputs.at(-1);
+let dice = [0, 0, 0, 0, 0, 0, 0];
 
-const checkRange = (x, y) => {
-  if (x < 0 || y < 0 || x >= n || y >= m) return false;
-  return true;
+const moveDice = (comment) => {
+  if (comment === 1) dice = [0, dice[4], dice[2], dice[1], dice[6], dice[5], dice[3]];
+  if (comment === 2) dice = [0, dice[3], dice[2], dice[6], dice[1], dice[5], dice[4]];
+  if (comment === 3) dice = [0, dice[2], dice[6], dice[3], dice[4], dice[1], dice[5]];
+  if (comment === 4) dice = [0, dice[5], dice[1], dice[3], dice[4], dice[6], dice[2]];
 };
 
-const moveRight = () => {
-  y += 1;
-  const newDice = [...dice];
-  dice = [
-    newDice[3],
-    newDice[1],
-    newDice[0],
-    newDice[5],
-    newDice[4],
-    newDice[2],
-  ];
+const dx = [0, 0, 0, -1, 1];
+const dy = [0, 1, -1, 0, 0];
+for (const comment of comments) {
+  const nx = x + dx[comment];
+  const ny = y + dy[comment];
 
-  if (map[x][y] === 0) {
-    map[x][y] = dice[5];
-  } else {
-    dice[5] = map[x][y];
-    map[x][y] = 0;
+  // 이동할 위치가 범위내에 있는지 확인
+  if (nx < 0 || ny < 0 || nx >= n || ny >= m) continue;
+  x = nx;
+  y = ny;
+  moveDice(comment);
+
+  if (map[nx][ny] === 0) map[nx][ny] = dice[6];
+  else {
+    dice[6] = map[nx][ny];
+    map[nx][ny] = 0;
   }
-  console.log(dice[0]);
-};
 
-const moveLeft = () => {
-  y -= 1;
-  const newDice = [...dice];
-  dice = [
-    newDice[2],
-    newDice[1],
-    newDice[5],
-    newDice[0],
-    newDice[4],
-    newDice[3],
-  ];
-
-  if (map[x][y] === 0) {
-    map[x][y] = dice[5];
-  } else {
-    dice[5] = map[x][y];
-    map[x][y] = 0;
-  }
-  console.log(dice[0]);
-};
-
-const moveUp = () => {
-  x -= 1;
-  const newDice = [...dice];
-  dice = [
-    newDice[4],
-    newDice[0],
-    newDice[2],
-    newDice[3],
-    newDice[5],
-    newDice[1],
-  ];
-  if (map[x][y] === 0) {
-    map[x][y] = dice[5];
-  } else {
-    dice[5] = map[x][y];
-    map[x][y] = 0;
-  }
-  console.log(dice[0]);
-};
-
-const moveDown = () => {
-  x += 1;
-  const newDice = [...dice];
-  dice = [
-    newDice[1],
-    newDice[5],
-    newDice[2],
-    newDice[3],
-    newDice[0],
-    newDice[4],
-  ];
-
-  if (map[x][y] === 0) {
-    map[x][y] = dice[5];
-  } else {
-    dice[5] = map[x][y];
-    map[x][y] = 0;
-  }
-  console.log(dice[0]);
-};
-
-for (const c of comments.split(' ')) {
-  if (c === '1' && checkRange(x, y + 1)) moveRight();
-  if (c === '2' && checkRange(x, y - 1)) moveLeft();
-  if (c === '3' && checkRange(x - 1, y)) moveUp();
-  if (c === '4' && checkRange(x + 1, y)) moveDown();
+  console.log(dice[1]);
 }
