@@ -1,44 +1,31 @@
 const fs = require('fs');
 const path = process.platform === 'linux' ? '/dev/stdin' : 'input.txt';
 const inputs = fs.readFileSync(path).toString().trim().split('\n');
+const [n, d, k, c] = inputs.shift().split(' ').map(Number);
+const sushi = inputs.map(Number);
+sushi.push(...sushi);
 
-const [N, d, k, c] = inputs[0].split(' ').map(Number);
+const count = Array(d + 1).fill(0);
+let ans = 0;
+let kind = 0;
 
-// 만약 벨트 위에 초밥이 있다면
-const sushi = inputs.slice(1).map(Number);
-
-let maxCount = 0;
-let count = 0;
-const seq = sushi.slice(0, k).reduce((acc, v) => {
-  if (acc[v]) acc[v]++;
-  else {
-    acc[v] = 1;
-    count++;
-    maxCount++;
-  }
-  return acc;
-}, {});
-
-let i = 0;
-let j = k - 1;
-
-while (i < N) {
-  if (seq[sushi[i]] === 1) count--;
-
-  seq[sushi[i]]--;
-
-  i++;
-  j++;
-
-  if (j === N) j = 0;
-
-  if (seq[sushi[j]]) seq[sushi[j]]++;
-  else {
-    seq[sushi[j]] = 1;
-    count++;
-  }
-
-  maxCount = Math.max(maxCount, count + !seq[c]);
+for (let i = 0; i < k; i++) {
+  const idx = sushi[i];
+  if (count[idx] === 0) kind++;
+  count[idx]++;
 }
 
-console.log(maxCount);
+for (let i = 0; i < n; i++) {
+  ans = Math.max(ans, kind + (count[c] ? 0 : 1));
+
+  const start = sushi[i];
+  const end = sushi[i + k];
+
+  count[start] -= 1;
+  if (count[start] === 0) kind--;
+
+  if (count[end] === 0) kind++;
+  count[end] += 1;
+}
+
+console.log(ans);
