@@ -5,9 +5,9 @@ const [n, k] = fs.readFileSync(path).toString().trim().split(' ').map(Number);
 const q = [[n, 0, n + '']];
 const visited = Array(200001).fill(false);
 const prev = Array(200001).fill(-1);
-
-while (q.length) {
-  const [node, cnt] = q.shift();
+let front = 0;
+while (front < q.length) {
+  const [node, cnt] = q[front++];
   if (node === k) {
     let cur = k;
     let ans = [k];
