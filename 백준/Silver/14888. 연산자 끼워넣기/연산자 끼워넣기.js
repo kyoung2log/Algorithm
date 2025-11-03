@@ -3,16 +3,9 @@ const path = process.platform === 'linux' ? '/dev/stdin' : 'input.txt';
 const inputs = fs.readFileSync(path).toString().trim().split('\n');
 const n = +inputs[0];
 const numbers = inputs[1].split(' ').map(Number);
-const operationCount = inputs[2].split(' ').map(Number);
+const op = inputs[2].split(' ').map(Number);
 let max = -Infinity;
 let min = Infinity;
-
-const operation = [];
-for (let i = 0; i < 4; i++) {
-  for (let j = 0; j < operationCount[i]; j++) {
-    operation.push(i);
-  }
-}
 
 const calculate = (a, b, op) => {
   switch (op) {
@@ -27,39 +20,27 @@ const calculate = (a, b, op) => {
   }
 };
 
-const evaluate = (selected) => {
-  let ans = numbers[0];
+const dfs = (idx, result) => {
+  if (idx >= n) {
+    max = Math.max(result, max);
+    min = Math.min(result, min);
 
-  for (let i = 0; i < selected.length; i++) {
-    const opIndex = selected[i];
-    const op = operation[opIndex];
-    ans = calculate(ans, numbers[i + 1], op);
-  }
-
-  max = Math.max(max, ans);
-  min = Math.min(min, ans);
-};
-
-const visited = Array(n - 1).fill(false);
-
-const bt = (selected) => {
-  if (selected.length === n - 1) {
-    evaluate(selected);
     return;
   }
 
-  for (let i = 0; i < n - 1; i++) {
-    if (visited[i]) continue;
+  for (let i = 0; i < 4; i++) {
+    if (op[i] > 0) {
+      const a = result;
+      const b = numbers[idx];
 
-    visited[i] = true;
-    selected.push(i);
-    bt(selected);
-    selected.pop();
-    visited[i] = false;
+      op[i] -= 1;
+      dfs(idx + 1, calculate(a, b, i));
+      op[i] += 1;
+    }
   }
 };
 
-bt([]);
+dfs(1, numbers[0]);
 
 console.log(max);
 console.log(min);
