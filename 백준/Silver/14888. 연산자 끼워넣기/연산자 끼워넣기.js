@@ -40,7 +40,7 @@ const evaluate = (selected) => {
   min = Math.min(min, ans);
 };
 
-const visited = Array(operation.length).fill(false);
+const visited = Array(n - 1).fill(false);
 
 const bt = (selected) => {
   if (selected.length === n - 1) {
@@ -48,7 +48,7 @@ const bt = (selected) => {
     return;
   }
 
-  for (let i = 0; i < operation.length; i++) {
+  for (let i = 0; i < n - 1; i++) {
     if (visited[i]) continue;
 
     visited[i] = true;
