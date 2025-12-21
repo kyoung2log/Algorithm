@@ -12,7 +12,6 @@ const dx = [1, -1, 0, 0, 0, 0];
 const dy = [0, 0, 1, -1, 0, 0];
 const dz = [0, 0, 0, 0, 1, -1];
 
-// 맵 생성
 for (let i = 0; i < n * h; i++) {
   tomatoBox.push(inputs[i].split(' ').map(Number));
 
@@ -22,7 +21,6 @@ for (let i = 0; i < n * h; i++) {
   }
 }
 
-// 시작 좌표 구해주기
 for (let i = 0; i < h; i++) {
   for (let j = 0; j < n; j++) {
     for (let k = 0; k < m; k++) {
@@ -33,7 +31,6 @@ for (let i = 0; i < h; i++) {
   }
 }
 
-// bfs 시작
 while (front < q.length) {
   const [z, y, x] = q[front++];
 
@@ -53,8 +50,4 @@ while (front < q.length) {
 
 const answer = tomatoBoxes.flat(Infinity);
 
-if (answer.includes(0)) {
-  console.log(-1);
-} else {
-  console.log(Math.max(...answer) - 1);
-}
+console.log(answer.includes(0) ? -1 : Math.max(...answer) - 1);
